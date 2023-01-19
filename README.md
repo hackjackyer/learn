@@ -2,16 +2,6 @@
 
 ## 利用VXLAN使不同服务器间的容器二层网络通信
 
-参考文档
-* https://docs.docker.com/network/bridge/
-* https://blog.thestateofme.com/2014/06/08/connecting-docker-containers-between-vms-with-vxlan/
-* https://www.thegeekdiary.com/arp-command-not-found/amp/
-* https://devcoops.com/assign-static-ip-address-docker-container/#:~:text=1%20Step%201.%20Create%20a%20network%20first.%20docker,3%20Step%203.%20Verify%20the%20IP%20address%20assignment.
-* https://www.tecmint.com/create-network-bridge-in-rhel-centos-8/
-* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/assembly_using-a-vxlan-to-create-a-virtual-layer-2-domain-for-vms_configuring-and-managing-networking
-* https://docs.docker.com/engine/tutorials/networkingcontainers/#:~:text=Docker%20includes%20support%20for%20networking%20containers%20through%20the,own%20drivers%20but%20that%20is%20an%20advanced%20task.
-* http://www.billauer.co.il/ipmasq-html.html#:~:text=%20iptables%20-t%20nat%20-A%20POSTROUTING%20-j%20MASQUERADE,will%20appear%20to%20come%20from%20the%20masquerading%20host.
-
 ### 实验环境
 
 * vm:centos7
@@ -49,3 +39,14 @@ yum install -y iproute net-tools
 ping 172.17.0.11
 ping 172.17.0.12
 ```
+
+### 参考文档
+
+* https://docs.docker.com/network/bridge/
+* https://blog.thestateofme.com/2014/06/08/connecting-docker-containers-between-vms-with-vxlan/
+* https://www.thegeekdiary.com/arp-command-not-found/amp/
+* https://devcoops.com/assign-static-ip-address-docker-container/#:~:text=1%20Step%201.%20Create%20a%20network%20first.%20docker,3%20Step%203.%20Verify%20the%20IP%20address%20assignment.
+* https://www.tecmint.com/create-network-bridge-in-rhel-centos-8/
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/assembly_using-a-vxlan-to-create-a-virtual-layer-2-domain-for-vms_configuring-and-managing-networking
+* https://docs.docker.com/engine/tutorials/networkingcontainers/#:~:text=Docker%20includes%20support%20for%20networking%20containers%20through%20the,own%20drivers%20but%20that%20is%20an%20advanced%20task.
+* http://www.billauer.co.il/ipmasq-html.html#:~:text=%20iptables%20-t%20nat%20-A%20POSTROUTING%20-j%20MASQUERADE,will%20appear%20to%20come%20from%20the%20masquerading%20host.
